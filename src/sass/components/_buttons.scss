@@ -1,1 +1,3 @@
-    
+.btn {
+  @include button(6px, $default, $text-dark, 18px 34px);
+}
