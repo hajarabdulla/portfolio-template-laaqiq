@@ -1,6 +1,17 @@
+// Colors
 $text-dark: #391400;
 $text-dark-accent: #ef6d58;
 $text-dark-gray: rgba(57, 20, 0, 0.64);
 $text-light: #ffffff;
 $text-dark: #000000;
 $text-light-gary: rgba(255, 255, 255, 0.64);
+
+// Breakpoints
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
