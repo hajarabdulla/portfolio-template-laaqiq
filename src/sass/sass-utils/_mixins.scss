@@ -1,0 +1,14 @@
+//mixin for text typography
+@mixin text() {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
