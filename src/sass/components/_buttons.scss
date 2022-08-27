@@ -1,3 +1,7 @@
 .btn {
-  @include button(6px, $default, $text-dark, 18px 34px);
+  @include button(6px, $default, $text-dark, 18px 34px, 900, 14px, 14px);
+}
+
+.btn-primary {
+  @include button(6px, $text-dark-accent, $default, 18px 34px, 900, 14px, 14px);
 }

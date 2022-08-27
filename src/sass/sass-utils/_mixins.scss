@@ -1,6 +1,32 @@
-@mixin button($border-size, $back-color, $text-color, $padding-size) {
+@mixin button(
+  $border-size,
+  $back-color,
+  $text-color,
+  $padding-size,
+  $font-weight,
+  $font-size,
+  $line-height
+) {
   border-radius: $border-size;
   background-color: $back-color;
   color: $text-color;
   padding: $padding-size;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  border: none;
+  text-align: center;
+}
+
+@mixin typo($weight, $size, $height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin flexbox($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
 }
