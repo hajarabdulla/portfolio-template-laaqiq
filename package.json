@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node-sass --watch ./src/sass --output ./public"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "url": "https://github.com/HajarAbdullayeva/portfolio-template-laaqiq/issues"
   },
   "homepage": "https://github.com/HajarAbdullayeva/portfolio-template-laaqiq#readme",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^7.0.1"
   }
 }
