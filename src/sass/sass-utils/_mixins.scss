@@ -4,9 +4,3 @@
   color: $text-color;
   padding: $padding-size;
 }
-
-@mixin text() {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $height;
-}
