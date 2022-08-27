@@ -5,7 +5,7 @@
   padding: $padding-size;
 }
 
-@mixin text() {
+@mixin text($size, $weight, $height) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
