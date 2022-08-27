@@ -4,3 +4,12 @@
   color: $text-color;
   padding: $padding-size;
 }
+<<<<<<< HEAD
+=======
+
+@mixin text($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+>>>>>>> 668b43ff8adbe825d0ccbb48115758698e6c020b
