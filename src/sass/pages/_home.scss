@@ -1,3 +1,722 @@
+.container {
+  max-width: 992px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+//! Page header section
+.home-container {
+  background-color: $background-color-dark;
+  padding-bottom: 4rem;
+}
+
+.home-header {
+  @include flexbox(center, space-between, row);
+  padding-block: 1rem;
+}
+
+.menu {
+  @include flexbox(center, space-between, row);
+  flex: 1;
+}
+
+.home-header__logo {
+  cursor: pointer;
+  &:hover {
+    filter: brightness(140%);
+  }
+}
+
+.home-header__navbar {
+  @include flexbox(center, center, row);
+  @include typo(400, 1rem, initial, $default);
+  flex-basis: 70%;
+  gap: 4rem;
+  li:hover {
+    color: $text-dark-accent;
+  }
+}
+
+.home-header-btn {
+  background-color: transparent;
+  border: thin solid $default;
+  color: $default;
+  font-size: 0.7rem;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: $default;
+    color: $dark;
+  }
+}
+
+.home-info {
+  margin-top: 3rem;
+  @include flexbox(center, space-between, row);
+
+  .btn-contact {
+    background-color: transparent !important;
+    color: $default;
+    text-transform: capitalize;
+    font-weight: 400;
+
+    &:hover {
+      color: $text-dark-accent;
+    }
+  }
+}
+
+.home-star {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  z-index: -1;
+}
+
+.home-info__text {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    @include typo(400, 1rem, initial, $text-dark-accent);
+  }
+
+  h1 {
+    margin-top: 1rem;
+    @include typo(600, 72px, 80px, $default);
+  }
+
+  p {
+    padding-block: 1rem;
+    @include typo(400, 1rem, 2rem, $text-light-gary);
+  }
+
+  .btn-primary {
+    font-size: 0.7rem;
+    padding: 1rem 2rem;
+
+    &:hover {
+      filter: brightness(140%);
+    }
+  }
+}
+
+.home-info__img {
+  flex: 0.7;
+
+  img {
+    width: 100%;
+  }
+}
+
+.home-testimonial {
+  margin-top: 2rem;
+  gap: 1rem;
+  width: 25rem;
+  @include flexbox(center, space-between, row);
+}
+
+.home-testimonial__text {
+  p {
+    @include typo(400, 1rem, 2rem, $text-light-gary);
+  }
+
+  h6 {
+    @include typo(400, 1rem, 2rem, $default);
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: thin solid $text-light-gary;
+  padding: 0.5rem;
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: $text-light-gary;
+    transition: 0.4s;
+    margin: 6px 0;
+    position: relative;
+  }
+
+  .change.bar1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .change.bar2 {
+    opacity: 0;
+  }
+
+  .change.bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .home-header__navbar {
+    @include flexbox(center, center, column);
+    margin-bottom: 3rem;
+  }
+
+  .home-info {
+    @include flexbox(center, center, column);
+  }
+
+  .home-info__text {
+    order: 2;
+  }
+
+  .home-info__img {
+    order: 1;
+  }
+
+  .companies {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 3rem;
+    z-index: 9999;
+    background-color: $text-dark-accent;
+    @include flexbox(center, space-between, column);
+    display: none;
+    &.change {
+      display: flex;
+    }
+    .home-header__navbar li:hover {
+      color: $default;
+      filter: brightness(80%);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-testimonial {
+    width: auto;
+    justify-content: flex-start;
+  }
+}
+// ! Home about section
+.home-about {
+  background-color: #fdf0e9;
+}
+
+.companies {
+  padding-block: 2.7rem;
+  border-bottom: thin solid #f3d1bf;
+  img {
+    width: 100%;
+  }
+}
+
+.design-agency {
+  margin-top: 3rem;
+  @include flexbox(center, space-between, row);
+  gap: 4rem;
+}
+
+.design-agency__img {
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}
+
+.design-agency__text {
+  flex: 1;
+  p {
+    @include typo(400, 1rem, 2rem, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  h2 {
+    @include typo(800, 3.2rem, 4rem, $text-dark);
+  }
+
+  h3 {
+    @include typo(400, 1.2rem, initial, $text-dark);
+    margin-block: 1rem;
+  }
+
+  h4 {
+    @include typo(400, 1rem, 2rem, $text-dark);
+    margin-bottom: 2rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    background-color: $default;
+    color: $dark;
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .design-agency {
+    @include flexbox(center, space-between, column);
+  }
+  .design-agency__text {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-info__text h1 {
+    @include typo(600, 2.5rem, 5rem, $default);
+  }
+}
+
+// ! Percents
+.percents {
+  @include flexbox(center, space-between, row);
+  margin-block: 7rem;
+  border: thin solid #f3d1bf;
+
+  div {
+    border-left: thin solid #f3d1bf;
+    padding: 2rem;
+    flex: 1;
+    h1 {
+      @include typo(800, 4rem, initial, $text-dark);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include typo(400, 1.2rem, initial, $text-dark);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .percents {
+    @include flexbox(center, space-between, column);
+
+    div {
+      border-left: none;
+      width: 100%;
+      text-align: center;
+      border-bottom: thin solid #f3d1bf;
+    }
+  }
+}
+
+// ! How we work
+.how-we-work {
+  @include flexbox(center, space-between, row);
+  gap: 5rem;
+  margin-block: 7rem;
+}
+
+.how-we-work__text {
+  flex: 1;
+  h4 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase
+  }
+
+  h2 {
+    @include typo(800, 2.5rem, 3.5rem, $text-dark);
+    margin-block: 1rem;
+  }
+
+  p {
+    @include typo(400, 1rem, 1.8rem, $text-dark-gray);
+  }
+
+  button {
+    margin-top: 1rem;
+    background-color: transparent;
+    padding: 0;
+    text-transform: capitalize;
+    @include typo(600, 1rem, 1.8rem, $text-dark);
+
+    &:hover {
+      color: $text-dark-accent;
+    }
+  }
+}
+
+.how-we-work__service {
+  flex: 1;
+  @include flexbox(center, space-between, column);
+  div {
+    @include flexbox(center, space-between, row);
+    align-self: flex-start;
+    gap: 2rem;
+
+    span {
+      @include typo(800, 4rem, initial, $text-dark);
+    }
+
+    p {
+      @include typo(800, 1.4rem, initial, $text-dark);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how-we-work {
+    @include flexbox(center, space-between, column);
+  }
+  // .how-we-work__text {
+  // width: 360px;
+  // margin: auto;
+  // }
+}
+
+//  ! Video player
+.video-player {
+  @include flexbox(center, space-between, row);
+  position: relative;
+  &:before {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    content: "";
+    border-top: thin solid #f3d1bf;
+    width: 100%;
+    height: 10px;
+  }
+}
+
+.video-player__info {
+  flex: 1;
+  padding-left: 3rem;
+  h6 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    @include typo(800, 2.5rem, 3rem, $text-dark);
+  }
+
+  p {
+    @include typo(400, 1rem, 2rem, $text-dark-gray);
+    margin-block: 1rem;
+  }
+}
+
+.video-player__container {
+  position: relative;
+  flex: 1;
+  .player {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 50%);
+    width: 148px;
+    height: 148px;
+  }
+  img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  span {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    @include typo(400, 1rem, initial, $default);
+    padding: 0.2rem;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video-player {
+    @include flexbox(center, space-between, column);
+  }
+  .video-player__info {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+// ! New look section
+.new-look {
+  margin-top: 10rem;
+  @include flexbox(center, space-between, row);
+  gap: 3rem;
+}
+
+.new-look__info {
+  flex: 1;
+
+  h6 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  h1 {
+    @include typo(800, 3.3rem, 3.7rem, $text-dark);
+    margin-block: 1.5rem;
+  }
+
+  & > p {
+    margin-bottom: 2rem;
+    @include typo(600, 1rem, 2rem, $text-dark-gray);
+  }
+
+  .new-look__info-list {
+    & > div {
+      @include flexbox(center, initial, row);
+      margin-bottom: 1rem;
+      gap: 1rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.new-look__img {
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new-look {
+    @include flexbox(center, space-between, column);
+  }
+}
+
+// ! Home features section
+.home-features {
+  @include flexbox(center, initial, row);
+  gap: 10rem;
+  margin-top: 8rem;
+}
+
+.home-features__info {
+  flex: 1;
+
+  h6 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  p {
+    @include typo(400, 1rem, 2rem, $text-dark);
+    margin-block: 1.6rem;
+  }
+
+  button {
+    background-color: transparent;
+    padding: 0;
+    text-transform: capitalize;
+    @include typo(600, 1rem, initial, $text-dark);
+    &:hover {
+      color: $text-dark-accent;
+    }
+  }
+}
+
+.home-features__boxes {
+  flex: 1.8;
+  @include flexbox(flex-end, center, row);
+
+  & > div {
+    border-radius: 5px;
+    border: thin solid #f3d1bf;
+    padding: 3rem 1rem;
+
+    h2 {
+      @include typo(600, 1.8rem, initial, $text-dark);
+      margin-block: 1rem;
+    }
+  }
+
+  .professional-box {
+    background-color: $default;
+    .professional-img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: $text-dark-accent;
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-features {
+    @include flexbox(center, space-between, column);
+  }
+
+  .home-features__boxes {
+    @include flexbox(center, space-between, column);
+  }
+}
+
+// !  Digital Products Section
+.digital-products {
+  @include flexbox(center, space-between, row);
+  gap: 6rem;
+  margin-top: 10rem;
+}
+
+.digital-products__img {
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}
+
+.digital-products__info {
+  flex: 1;
+
+  h6 {
+    @include typo(600, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @include typo(600, 3rem, 4rem, $text-dark);
+  }
+
+  & > p {
+    @include typo(400, 1rem, 2rem, $text-dark);
+    padding-block: 1rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    padding: 1rem 2.2rem;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+}
+
+.digital-info__testimonial {
+  margin-block: 1rem;
+  @include flexbox(flex-start, space-between, row);
+  gap: 1rem;
+  p {
+    @include typo(400, 1rem, 1.5rem, $text-dark-gray);
+  }
+  .name {
+    @include typo(400, 1rem, initial, $text-dark);
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .digital-products {
+    @include flexbox(center, space-between, column);
+  }
+
+  .digital-products__info {
+    h1 {
+      @include typo(600, 2.5rem, initial, $text-dark);
+    }
+  }
+}
+
+// ! Agency Help
+.agency-help {
+  margin-top: 10rem;
+}
+
+.agency-help__header {
+  h6 {
+    @include typo(400, 1rem, 1rem, $text-dark-accent);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @include typo(800, 2.3rem, initial, $text-dark);
+    width: 20rem;
+    margin-block: 1rem;
+  }
+}
+
+.home-agency__container {
+  @include flexbox(center, space-between, row);
+  border: thin solid #f3d1bf;
+
+  & > div {
+    border-left: thin solid #f3d1bf;
+    padding: 2rem;
+    .home-agency__icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background-color: $text-dark-accent;
+    }
+
+    h2 {
+      padding-top: 1.6rem;
+      @include typo(800, 1.7rem, initial, $text-dark);
+    }
+
+    p {
+      padding-block: 1.6rem;
+      @include typo(400, 1rem, 1.5rem, $text-dark-gray);
+    }
+
+    button {
+      background-color: transparent;
+      padding: 0;
+      @include typo(600, 0.8rem, initial, $text-dark-gray);
+      text-transform: capitalize;
+      &:hover {
+        color: $text-dark-accent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-agency__container {
+    @include flexbox(center, space-between, column);
+
+    & > div {
+      border-left: none;
+      border-bottom: thin solid #f3d1bf;
+      width: 100%;
+    }
+  }
+}
+
 //! Testimonial section
 section h5 {
   margin-bottom: 20px;
