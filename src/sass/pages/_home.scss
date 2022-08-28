@@ -1,3 +1,127 @@
+.container {
+  max-width: 992px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+//! Page header section
+.home-container {
+  background-color: $background-color-dark;
+  padding-bottom: 4rem;
+}
+
+.home-header {
+  @include flexbox(center, space-between, row);
+  padding-block: 1rem;
+}
+
+.home-header__logo {
+  cursor: pointer;
+  &:hover {
+    filter: brightness(140%);
+  }
+}
+
+.home-header__navbar {
+  @include flexbox(center, space-around, row);
+  @include typo(400, 1rem, initial, $default);
+  flex-basis: 50%;
+
+  li:hover {
+    color: $text-dark-accent;
+  }
+}
+
+.home-header-btn {
+  background-color: transparent;
+  border: thin solid $default;
+  color: $default;
+  font-size: 0.7rem;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: $default;
+    color: $dark;
+  }
+}
+
+.home-info {
+  margin-top: 3rem;
+  @include flexbox(center, space-between, row);
+
+  .btn-contact {
+    background-color: transparent !important;
+    color: $default;
+    text-transform: capitalize;
+    font-weight: 400;
+
+    &:hover {
+      color: $text-dark-accent;
+    }
+  }
+}
+
+.home-star {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  z-index: -1;
+}
+
+.home-info__text {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    @include typo(400, 1rem, initial, $text-dark-accent);
+  }
+
+  h1 {
+    margin-top: 1rem;
+    @include typo(600, 4.6rem, 5rem, $default);
+  }
+
+  p {
+    padding-block: 1rem;
+    @include typo(400, 1rem, 2rem, $text-light-gary);
+  }
+
+  .btn-primary {
+    font-size: 0.7rem;
+    padding: 1rem 2rem;
+
+    &:hover {
+      filter: brightness(140%);
+    }
+  }
+}
+
+.home-info__img {
+  flex: 0.7;
+
+  img {
+    width: 100%;
+  }
+}
+
+.home-testimonial {
+  margin-top: 2rem;
+  width: 20rem;
+  @include flexbox(center, space-between, row);
+}
+
+.home-testimonial__text {
+  p {
+    @include typo(400, 1rem, 2rem, $text-light-gary);
+  }
+
+  h6 {
+    @include typo(400, 1rem, 2rem, $default);
+  }
+}
+
 //! Testimonial section
 section > h5 {
   margin-bottom: 20px;
