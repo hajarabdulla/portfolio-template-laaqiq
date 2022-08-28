@@ -358,6 +358,122 @@
   }
 }
 
+// ! Home features section
+.home-features {
+  @include flexbox(center, initial, row);
+  gap: 10rem;
+  margin-top: 8rem;
+}
+
+.home-features__info {
+  flex: 1;
+
+  h6 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  p {
+    @include typo(400, 1.2rem, initial, $text-dark);
+    margin-block: 1.6rem;
+  }
+
+  button {
+    background-color: transparent;
+    padding: 0;
+    text-transform: capitalize;
+    @include typo(600, 1rem, initial, $text-dark);
+    &:hover {
+      color: $text-dark-accent;
+    }
+  }
+}
+
+.home-features__boxes {
+  flex: 1.8;
+  @include flexbox(flex-end, center, row);
+
+  & > div {
+    border-radius: 5px;
+    border: thin solid #f3d1bf;
+    padding: 3rem 1rem;
+
+    h2 {
+      @include typo(600, 1.8rem, initial, $text-dark);
+      margin-block: 1rem;
+    }
+  }
+
+  .professional-box {
+    background-color: $default;
+    .professional-img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: $text-dark-accent;
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+
+// !  Digital Products Section
+.digital-products {
+  @include flexbox(center, space-between, row);
+  gap: 6rem;
+  margin-top: 10rem;
+}
+
+.digital-products__img {
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}
+
+.digital-products__info {
+  flex: 1;
+
+  h6 {
+    @include typo(600, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @include typo(600, 3.5rem, initial, $text-dark);
+    @include typo(600, 3.5rem, initial, $text-dark);
+  }
+
+  & > p {
+    @include typo(400, 1rem, initial, $text-dark);
+    padding-block: 1rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    padding: 1rem 2.2rem;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+}
+
+.digital-info__testimonial {
+  margin-block: 1rem;
+  @include flexbox(center, space-between, row);
+  gap: 1rem;
+  p {
+    @include typo(400, 1rem, 1rem, $text-dark-gray);
+  }
+  .name {
+    @include typo(400, 1rem, initial, $text-dark);
+    padding-top: 1rem;
+  }
+}
+
 //! Testimonial section
 section > h5 {
   margin-bottom: 20px;
