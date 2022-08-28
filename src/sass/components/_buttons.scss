@@ -54,10 +54,26 @@
   @include icon(16px, 16px, $default);
 }
 
-.btn-primary-icon {
+.btn-default-icon {
   @include icon(16px, 16px, $text-dark-accent);
 }
 
-.btn-secondary-icon {
+.btn-deactice-icon {
+  @include icon(16px, 16px, $deactive-button);
+}
+
+.btn-primary-icon {
   @include icon(32px, 32px, $text-dark-accent);
+}
+
+.btn-secondary-icon {
+  @include icon(64px, 64px, $text-dark-accent);
+}
+
+.input-primary {
+  padding: 17px 0 17px 18px;
+  background: $default;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  width: 100%;
 }

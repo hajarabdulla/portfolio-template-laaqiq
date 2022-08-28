@@ -1,0 +1,141 @@
+@include lg {
+  //   Testimonial Section
+  .testimonial-section {
+    padding: 92px 23px 108px 23px;
+  }
+
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .testimonial {
+    width: 100%;
+  }
+
+  //   Pricing Section
+  .pricing-section {
+    padding: 0 23px 156px 23px;
+  }
+
+  .pricing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-section {
+    padding: 0 23px 156px 23px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .awards-section {
+    padding: 0 23px 112px 23px;
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .awards {
+    flex-direction: column;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .blog-section {
+    padding: 0 23px 68px 23px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      align-items: flex-start;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .newsletter-section {
+    padding: 60px 23px 112px 23px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      div {
+        flex-direction: column;
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .google-map {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 64px;
+
+    > div {
+      padding: 0 23px;
+    }
+
+    form {
+      position: static;
+      max-width: 100%;
+    }
+  }
+
+  .contact-types {
+    padding: 80px 23px 130px 23px;
+    flex-direction: column;
+  }
+
+  .contact-type {
+    padding: 32px 123px 32px 28px;
+  }
+
+  .contact-type:last-child {
+    padding: 32px 123px 32px 28px;
+  }
+
+  .poster {
+    padding: 0 23px 92px 23px;
+
+    > div {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 32px 28px 48px 28px;
+    }
+  }
+
+  footer {
+    padding: 0 23px 40px 23px;
+    text-align: center;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 51px;
+    align-items: center;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 32px;
+  }
+}

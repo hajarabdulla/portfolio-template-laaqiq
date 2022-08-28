@@ -3,14 +3,14 @@
 
 @font-face {
   font-family: "Epilogue";
-  src: url("../../font/Epilogue-Regular.ttf");
+  src: url("../../font/Epilogue-VariableFont_wght.ttf");
 }
 
 body {
   font-size: 10px;
   font-weight: 400;
   color: $text-dark-gray;
-  font-family: "Epilogue";
+  font-family: "Epilogue", sans-serif;
 }
 
 h1 {

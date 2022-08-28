@@ -1,3 +1,4 @@
+// Mixin for custom buttons
 @mixin button(
   $border-radius,
   $back-color,
@@ -19,8 +20,10 @@
   text-align: center;
   text-transform: $text-transform;
   cursor: pointer;
+  box-shadow: 0px 3px 9px rgba(57, 20, 0, 0.08);
 }
 
+// Mixin for typography styles
 @mixin typo($weight, $size, $height, $color) {
   font-weight: $weight;
   font-size: $size;
@@ -35,6 +38,7 @@
   flex-direction: $direction;
 }
 
+// Mixin for icon buttons
 @mixin icon($width, $height, $color) {
   border-radius: 50%;
   width: $width;
@@ -42,4 +46,11 @@
   border: none;
   background-color: $color;
   @include flexbox(center, center, row);
+}
+
+// Mixin for media query
+@mixin lg {
+  @media (max-width: map-get($media, "lg")) {
+    @content;
+  }
 }
