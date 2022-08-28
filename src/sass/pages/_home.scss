@@ -474,6 +474,62 @@
   }
 }
 
+// ! Agency Help
+.agency-help {
+  margin-top: 10rem;
+}
+
+.agency-help__header {
+  h6 {
+    @include typo(400, 1rem, 1rem, $text-dark-accent);
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @include typo(800, 2.3rem, initial, $text-dark);
+    width: 20rem;
+    margin-block: 1rem;
+  }
+}
+
+.home-agency__container {
+  @include flexbox(center, space-between, row);
+  border: thin solid #f3d1bf;
+
+  & > div {
+    border-left: thin solid #f3d1bf;
+    padding: 2rem;
+    .home-agency__icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background-color: $text-dark-accent;
+    }
+
+    h2 {
+      padding-top: 1.6rem;
+      @include typo(800, 1.7rem, initial, $text-dark);
+    }
+
+    p {
+      padding-block: 1.6rem;
+      @include typo(400, 1rem, 1.5rem, $text-dark-gray);
+    }
+
+    button {
+      background-color: transparent;
+      padding: 0;
+      @include typo(600, 0.8rem, initial, $text-dark-gray);
+      text-transform: capitalize;
+      &:hover {
+        color: $text-dark-accent;
+      }
+    }
+  }
+}
+
 //! Testimonial section
 section > h5 {
   margin-bottom: 20px;
