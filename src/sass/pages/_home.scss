@@ -179,7 +179,6 @@
   }
 }
 
-
 // ! Percents
 
 .percents {
@@ -229,7 +228,7 @@
     text-transform: capitalize;
     @include typo(600, 1rem, 1.8rem, $text-dark);
 
-    &:hover{
+    &:hover {
       color: $text-dark-accent;
     }
   }
@@ -251,7 +250,113 @@
   }
 }
 
+//  ! Video player
+.video-player {
+  @include flexbox(center, space-between, row);
+  position: relative;
+  &:before {
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    content: "";
+    border-top: thin solid #f3d1bf;
+    width: 100%;
+    height: 10px;
+  }
+}
 
+.video-player__info {
+  flex: 1;
+  padding-left: 3rem;
+  h6 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    @include typo(800, 3rem, initial, $text-dark);
+  }
+
+  p {
+    @include typo(400, 1rem, initial, $text-dark-gray);
+    margin-block: 1rem;
+  }
+}
+
+.video-player__container {
+  position: relative;
+  flex: 1;
+  .player {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 50%);
+    width: 148px;
+    height: 148px;
+  }
+  img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  span {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    @include typo(400, 1rem, initial, $default);
+    padding: 0.2rem;
+    border-radius: 4px;
+  }
+}
+
+// ! New look section
+
+.new-look {
+  margin-top: 10rem;
+  @include flexbox(center, space-between, row);
+  gap: 3rem;
+}
+
+.new-look__info {
+  flex: 1;
+
+  h6 {
+    @include typo(400, 1rem, initial, $text-dark-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  h1 {
+    @include typo(800, 4rem, 3.7rem, $text-dark);
+    margin-block: 1.5rem;
+  }
+
+  & > p {
+    margin-bottom: 2rem;
+    @include typo(600, 1rem, initial, $text-dark-gray);
+  }
+
+  .new-look__info-list {
+    & > div {
+      @include flexbox(center, initial, row);
+      margin-bottom: 1rem;
+      gap: 1rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.new-look__img {
+  flex: 1;
+  img {
+    width: 100%;
+  }
+}
 
 //! Testimonial section
 section > h5 {
