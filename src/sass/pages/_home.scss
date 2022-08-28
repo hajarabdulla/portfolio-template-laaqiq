@@ -1,0 +1,148 @@
+//! Testimonial section
+section > h5 {
+  margin-bottom: 20px;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background-color: #f3d1bf;
+}
+
+.testimonial-section {
+  text-align: center;
+  padding: 124px 135px 108px 135px;
+}
+
+.testimonials {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 336px 64px 272px 64px;
+}
+
+.testimonial {
+  padding: 48px;
+  text-align: start;
+  border: 1px solid #f3d1bf;
+  //   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  > p {
+    margin-top: 36px;
+    margin-bottom: 45px;
+  }
+
+  > div {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.testimonial:first-child {
+  grid-row: 1/3;
+  border-radius: 6px 0px 0px 0px;
+  background-color: $default;
+}
+
+.testimonial:nth-child(2) {
+  border-radius: 0px 6px 0px 0px;
+}
+
+.testimonial:nth-child(3) {
+  grid-row: 3/5;
+  border-radius: 0px 0px 0px 6px;
+}
+
+.testimonial:last-child {
+  grid-row: 2/4;
+  border-radius: 0px 0px 6px 0px;
+}
+
+//!  Pricing section
+.pricing-section {
+  padding: 0 135px 156px 135px;
+}
+
+.pricing {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 48px 512px;
+}
+
+.pricing-details {
+  text-align: start;
+  padding: 48px;
+  border: 1px solid #f3d1bf;
+  //   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  .btn-popular {
+    margin-bottom: 22px;
+    position: relative;
+    left: -8px;
+  }
+
+  h3 {
+    margin-top: 17px;
+    margin-bottom: 15px;
+  }
+
+  > div {
+    margin-top: 27px;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}
+
+.pricing-details:first-child {
+  grid-row: 2/3;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.pricing-details:nth-child(2) {
+  grid-row: 1/3;
+  border-radius: 6px 6px 0px 0px;
+  background-color: $default;
+}
+
+.pricing-details:last-child {
+  grid-row: 2/3;
+  border-radius: 0px 6px 6px 0px;
+}
+
+// ! Awards section
+.awards-section {
+  padding: 0 135px 112px 135px;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 67px;
+  }
+
+  > p {
+    margin-top: 60px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.awards {
+  @include flexbox(center, space-between, row);
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}

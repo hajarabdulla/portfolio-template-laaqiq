@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Epilogue";
-  src: url("../../font/Epilogue-Regular.ttf") format("truetype");
+  src: url("../../font/Epilogue-Regular.ttf");
 }
 
 body {
@@ -14,21 +14,29 @@ body {
 }
 
 h1 {
-  @include typo(800, 72px, 80px);
+  @include typo(800, 72px, 80px, $text-dark);
 }
 
 h2 {
-  @include typo(800, 56px, 64px);
+  @include typo(800, 56px, 64px, $text-dark);
 }
 
 h3 {
-  @include typo(800, 40px, 48px);
+  @include typo(800, 40px, 48px, $text-dark);
 }
 
 h4 {
-  @include typo(800, 24px, 32px);
+  @include typo(800, 24px, 32px, $text-dark);
 }
 
 h5 {
-  @include typo(400, 16px, 32px);
+  @include typo(400, 16px, 32px, $text-dark-accent);
+}
+
+p {
+  @include typo(400, 16px, 32px, $text-dark-gray);
+}
+
+span {
+  @include typo(400, 16px, 32px, $text-dark);
 }
