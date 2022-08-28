@@ -718,7 +718,7 @@
 }
 
 //! Testimonial section
-section > h5 {
+section h5 {
   margin-bottom: 20px;
 }
 
@@ -744,7 +744,7 @@ section > h5 {
 .testimonial {
   padding: 48px;
   text-align: start;
-  border: 1px solid #f3d1bf;
+  border: 1px solid $border-color;
   //   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   > p {
@@ -788,22 +788,23 @@ section > h5 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 48px 512px;
+  margin-top: 16px;
 }
 
 .pricing-details {
   text-align: start;
   padding: 48px;
-  border: 1px solid #f3d1bf;
+  border: 1px solid $border-color;
   //   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   .btn-popular {
     margin-bottom: 22px;
     position: relative;
     left: -8px;
+    cursor: default;
   }
 
   h3 {
-    margin-top: 17px;
     margin-bottom: 15px;
   }
 
@@ -838,6 +839,40 @@ section > h5 {
   border-radius: 0px 6px 6px 0px;
 }
 
+//! FAQ section
+.faq-section {
+  padding: 0 135px 156px 135px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 130px;
+
+  > div > p {
+    margin: 30px 0;
+  }
+}
+.faq {
+  padding: 45px;
+  border: 1px solid $border-color;
+  //   box-shadow: 0px 32px 64px rgba(57, 20, 0, 0.04);
+
+  p {
+    margin-top: 35px;
+  }
+}
+
+.faq:first-child {
+  border-radius: 6px 6px 0px 0px;
+  background-color: $default;
+}
+
+.faq:last-child {
+  border-radius: 0px 0px 6px 6px;
+}
+
+.title {
+  @include flexbox(center, space-between, row);
+}
+
 // ! Awards section
 .awards-section {
   padding: 0 135px 112px 135px;
@@ -863,5 +898,149 @@ section > h5 {
     display: flex;
     align-items: center;
     gap: 24px;
+  }
+}
+
+// !Blog section
+.blog-section {
+  padding: 0 135px 68px 135px;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    button {
+      height: 100%;
+    }
+  }
+}
+
+.blogs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+
+.blog {
+  > div {
+    padding: 26px 62px 0 0;
+  }
+
+  h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+//! Newsletter section
+.newsletter-section {
+  padding: 60px 135px 112px 135px;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      flex-grow: 3;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-grow: 2;
+    }
+  }
+}
+
+// .map::after {
+//   background-color: $text-dark-accent;
+// }
+
+// .map {
+//   filter: invert(58%) sepia(91%) saturate(2475%) hue-rotate(337deg)
+//     brightness(199%) contrast(73%);
+//   opacity: 1;
+// }
+
+// ! Contact section
+.contact-section {
+  position: relative;
+
+  form {
+    padding: 57px 48px 48px 48px;
+    position: absolute;
+    max-width: 470px;
+    background-color: $default;
+    border-radius: 6px;
+    bottom: 128px;
+    left: 135px;
+    @include flexbox(center, flex-end, column);
+    input {
+      margin-top: 28px;
+      margin-bottom: 16px;
+    }
+
+    textarea {
+      margin-top: 16px;
+      margin-bottom: 32px;
+      resize: none;
+    }
+
+    button {
+      margin-left: auto;
+    }
+  }
+}
+
+.contact-types {
+  padding: 80px 135px 130px 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-type {
+  padding: 32px 164px 38px 48px;
+  border: 1px solid $border-color;
+  width: 100%;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.contact-type:first-child {
+  border-radius: 6px 0px 0px 6px;
+}
+
+.contact-type:last-child {
+  border-radius: 0px 6px 6px 0px;
+  padding: 13px 164px 25px 48px;
+}
+
+//! Poster section
+.poster {
+  padding: 0 135px 92px 135px;
+  > div {
+    display: flex;
+    background-color: $text-dark-accent;
+    padding: 94px 70px 72px 100px;
+    color: $default;
+    gap: 90px;
+
+    h2 {
+      color: $default;
+    }
+    p {
+      color: $default;
+      margin-top: 28px;
+      margin-bottom: 34px;
+    }
   }
 }

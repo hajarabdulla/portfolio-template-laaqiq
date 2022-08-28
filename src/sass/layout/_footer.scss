@@ -1,0 +1,26 @@
+footer {
+  padding: 0 135px 40px 135px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+
+  > div {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.copyright {
+  margin-top: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    gap: 70px;
+  }
+}
