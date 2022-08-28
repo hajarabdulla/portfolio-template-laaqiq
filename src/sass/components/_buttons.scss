@@ -1,7 +1,63 @@
 .btn {
-  @include button(6px, $default, $text-dark, 18px 34px, 900, 14px, 14px);
+  @include button(
+    6px,
+    $default,
+    $text-dark,
+    18px 34px,
+    900,
+    14px,
+    14px,
+    uppercase
+  );
 }
 
 .btn-primary {
-  @include button(6px, $text-dark-accent, $default, 18px 34px, 900, 14px, 14px);
+  @include button(
+    6px,
+    $text-dark-accent,
+    $default,
+    18px 34px,
+    900,
+    14px,
+    14px,
+    uppercase
+  );
+}
+
+.btn-primary {
+  @include button(
+    6px,
+    $text-dark-accent,
+    $default,
+    18px 34px,
+    900,
+    14px,
+    14px,
+    uppercase
+  );
+}
+
+.btn-popular {
+  @include button(
+    19px,
+    $text-dark-accent,
+    $default,
+    4px 17px,
+    400,
+    16px,
+    32px,
+    capitalize
+  );
+}
+
+.btn-icon {
+  @include icon(16px, 16px, $default);
+}
+
+.btn-primary-icon {
+  @include icon(16px, 16px, $text-dark-accent);
+}
+
+.btn-secondary-icon {
+  @include icon(32px, 32px, $text-dark-accent);
 }

@@ -1,13 +1,14 @@
 @mixin button(
-  $border-size,
+  $border-radius,
   $back-color,
   $text-color,
   $padding-size,
   $font-weight,
   $font-size,
-  $line-height
+  $line-height,
+  $text-transform
 ) {
-  border-radius: $border-size;
+  border-radius: $border-radius;
   background-color: $back-color;
   color: $text-color;
   padding: $padding-size;
@@ -16,12 +17,15 @@
   line-height: $line-height;
   border: none;
   text-align: center;
+  text-transform: $text-transform;
+  cursor: pointer;
 }
 
-@mixin typo($weight, $size, $height) {
+@mixin typo($weight, $size, $height, $color) {
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
+  color: $color;
 }
 
 @mixin flexbox($align, $justify, $direction) {
@@ -29,4 +33,13 @@
   align-items: $align;
   justify-content: $justify;
   flex-direction: $direction;
+}
+
+@mixin icon($width, $height, $color) {
+  border-radius: 50%;
+  width: $width;
+  height: $height;
+  border: none;
+  background-color: $color;
+  @include flexbox(center, center, row);
 }
