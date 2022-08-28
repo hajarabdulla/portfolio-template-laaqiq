@@ -1,0 +1,138 @@
+.section-hero {
+  background-color: $background-color-dark;
+}
+
+.hero-text {
+  text-align: center;
+  padding-block: 6rem;
+  h1 {
+    @include typo(800, 4rem, initial, $default);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    @include typo(400, 1rem, 2rem, $text-light-gary);
+  }
+}
+
+.services {
+  margin-block: 5rem;
+
+  h5 {
+    text-transform: uppercase;
+  }
+}
+
+.services__text {
+  @include flexbox(flex-start, space-between, row);
+
+  h3 {
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  div {
+    flex: 1;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__text {
+    @include flexbox(flex-start, space-between, column);
+  }
+}
+
+footer {
+  padding: 0 135px 40px 135px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+
+  > div {
+    display: flex;
+    gap: 8px;
+  }
+
+  button {
+    padding: 1.2rem;
+  }
+}
+
+.copyright {
+  margin-top: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    gap: 70px;
+  }
+}
+
+//! Poster section
+.poster {
+  padding: 0 135px 92px 135px;
+  > div {
+    @include flexbox(center, space-between, row);
+    background-color: $text-dark-accent;
+    padding: 94px 70px 72px 100px;
+    color: $default;
+    gap: 90px;
+
+    h1 {
+      color: $default;
+    }
+    > div {
+      flex: 1;
+    }
+    .poster-img {
+      flex: 1;
+      img {
+        width: 100%;
+      }
+    }
+    h2 {
+      color: $default;
+    }
+    p {
+      color: $default;
+      margin-top: 28px;
+      margin-bottom: 34px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .poster {
+    padding: 0 23px 92px 23px;
+
+    > div {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 32px 28px 48px 28px;
+    }
+  }
+
+  footer {
+    padding: 0 23px 40px 23px;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 51px;
+    align-items: center;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
