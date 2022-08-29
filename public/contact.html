@@ -10,182 +10,184 @@
 </head>
 
 <body>
-<!-- ! Header Section-->
+    <!-- ! Header Section-->
 
-<section class="section-hero">
-    <div class="container">
-        <header class="home-header">
-            <div class="home-header__logo">
-                <a href="./index.html">
-                    <img src="../src/images/main-logo.svg" alt="main-logo">
-                </a>
+    <section class="section-hero">
+        <div class="container">
+            <header class="home-header">
+                <div class="home-header__logo">
+                    <a href="./index.html">
+                        <img src="../src/images/main-logo.svg" alt="main-logo">
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul class="home-header__navbar">
+                        <li><a href="#">About</a></li>
+                        <li><a href="./service.html">Services</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                    <button class="btn home-header-btn"><a href="./contact.html">Contact</a></button>
+                </div>
+                <div class="hamburger-menu">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+            </header>
+            <div class="hero-text">
+                <h1>Contact</h1>
+                <p>Agency provides a full service range including technical skills, design, business understanding.</p>
             </div>
-            <div class="menu">
-                <ul class="home-header__navbar">
-                    <li><a href="#">About</a></li>
-                    <li><a href="./service.html">Services</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-                <button class="btn home-header-btn"><a href="./contact.html">Contact</a></button>
-            </div>
-            <div class="hamburger-menu">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </div>
-        </header>
-        <div class="hero-text">
-            <h1>Contact</h1>
-            <p>Agency provides a full service range including technical skills, design, business understanding.</p>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<!--! Google map -->
-<div class="google-map">
-    <iframe class="map"
+    <!--! Google map -->
+    <div class="google-map">
+        <iframe class="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9522.524028257227!2d-80.34045472703207!3d39.275372794189536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884a69bc00097ea3%3A0xc29ca7f7d5ef04ae!2sLunetta%20St%2C%20Clarksburg%2C%20WV%2026301%2C%20USA!5e0!3m2!1sen!2s!4v1661684280142!5m2!1sen!2s"
             width="100%" height="720" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+        </iframe>
 
-    <div>
-        <section class="contact-section">
-
-            <form onSubmit="e.preventDefault()">
-                <h4>Get In Touch</h4>
-                <input type="email" class="input-primary" name="email" placeholder="Your email">
-
-                <select name="messages" id="message" class="input-primary">
-                    <option value="subject">Subject</option>
-                    <option value="about-contact">About Contact</option>
-                    <option value="about-prices">About Prices</option>
-                    <option value="offers">Offers & feedbacks</option>
-                </select>
-
-                <textarea class="input-primary" id="w3review" name="w3review" rows="4" cols="50"
-                          placeholder="Message"></textarea>
-                <button class="btn-primary">Submit now</button>
-            </form>
-        </section>
-    </div>
-</div>
-
-<div class="contact-types">
-    <div class="contact-type">
         <div>
-            <button class="btn-secondary-icon"><img src="../src/images/phone.svg" alt=""></button>
-            <h5>PHONE</h5>
+            <section class="contact-section">
+
+                <form onSubmit="e.preventDefault()">
+                    <h4>Get In Touch</h4>
+                    <input type="email" class="input-primary" name="email" placeholder="Your email">
+
+                    <select name="messages" id="message" class="input-primary">
+                        <option value="subject">Subject</option>
+                        <option value="about-contact">About Contact</option>
+                        <option value="about-prices">About Prices</option>
+                        <option value="offers">Offers & feedbacks</option>
+                    </select>
+
+                    <textarea class="input-primary" id="w3review" name="w3review" rows="4" cols="50"
+                        placeholder="Message"></textarea>
+                    <button class="btn-primary">Submit now</button>
+                </form>
+            </section>
         </div>
-        <span>+1 (234) 567-89-00</span>
     </div>
 
-    <div class="contact-type">
-        <div>
-            <button class="btn-secondary-icon"><img src="../src/images/mail.svg" alt=""></button>
-            <h5>EMAIL</h5>
-        </div>
-        <span>info@agency.com</span>
-    </div>
-
-    <div class="contact-type">
-        <div>
-            <button class="btn-secondary-icon"><img src="../src/images/compass.svg" alt=""></button>
-            <h5>ADDRESS</h5>
-        </div>
-        <span>2247 Lunetta Street, TX 76301</span>
-    </div>
-</div>
-
-<!-- ! FAQ section -->
-<section class="faq-section">
-    <div>
-        <h5>FAQ</h5>
-        <h3>Frequently Asked </h3>
-        <h3>Questions</h3>
-        <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling
-            in-house.</p>
-        <span>Contact Us</span>
-    </div>
-
-    <div class="faqs">
-        <div class="faq">
-            <div class="title">
-                <h4>A digital agency is a business</h4>
-                <button class="btn-primary-icon"><img src="../src/images/up.svg" alt=""></button>
+    <div class="contact-types">
+        <div class="contact-type">
+            <div>
+                <button class="btn-secondary-icon"><img src="../src/images/phone.svg" alt=""></button>
+                <h5>PHONE</h5>
             </div>
-            <p>Digital marketing efforts, instead of handling in-house. They can provide your business with a
-                variety of
-                digital
-                solutions to promote your product or service online and help you hit your marketing goals and grow
-                your
-                business.</p>
+            <span>+1 (234) 567-89-00</span>
         </div>
 
-        <div class="faq">
-            <div class="title">
-                <h4>Hire to outsource your digital</h4>
-                <button class="btn-primary-icon"><img src="../src/images/down.svg" alt=""></button>
+        <div class="contact-type">
+            <div>
+                <button class="btn-secondary-icon"><img src="../src/images/mail.svg" alt=""></button>
+                <h5>EMAIL</h5>
             </div>
+            <span>info@agency.com</span>
         </div>
 
-        <div class="faq">
-            <div class="title">
-                <h4>Marketing efforts</h4>
-                <button class="btn-primary-icon"><img src="../src/images/down.svg" alt=""></button>
+        <div class="contact-type">
+            <div>
+                <button class="btn-secondary-icon"><img src="../src/images/compass.svg" alt=""></button>
+                <h5>ADDRESS</h5>
             </div>
-        </div>
-
-        <div class="faq">
-            <div class="title">
-                <h4>Can provide your business</h4>
-                <button class="btn-primary-icon"><img src="../src/images/down.svg" alt=""></button>
-            </div>
+            <span>2247 Lunetta Street, TX 76301</span>
         </div>
     </div>
-</section>
 
-<!-- ! Footer Section -->
-<footer>
-    <div class="footer">
-        <h4>Agency</h4>
-
-        <ul>
-            <h5>Menu</h5>
-            <li><span>About</span></li>
-            <li><span>Services</span></li>
-            <li><span>Blog</span></li>
-            <li><span>Contact</span></li>
-        </ul>
-
-        <ul>
-            <h5>Service</h5>
-            <li><span>Design</span></li>
-            <li><span>Development</span></li>
-            <li><span>Marketing</span></li>
-            <li><span>See More</span></li>
-        </ul>
-
+    <!-- ! FAQ section -->
+    <section class="faq-section">
         <div>
-            <button class="btn-primary-icon"><img src="../src/images/fb.svg" alt=""></button>
-            <button class="btn-primary-icon"><img src="../src/images/twitter.svg" alt=""></button>
-            <button class="btn-primary-icon"><img src="../src/images/instagram.svg" alt=""></button>
+            <h5>FAQ</h5>
+            <h3>Frequently Asked </h3>
+            <h3>Questions</h3>
+            <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling
+                in-house.</p>
+            <span>Contact Us</span>
         </div>
-    </div>
 
-    <div class="border"></div>
+        <div class="faqs">
+            <div class="faq">
+                <div class="title">
+                    <h4>A digital agency is a business</h4>
+                    <button class="btn-primary-icon"><img src="../src/images/up.svg" alt=""></button>
+                </div>
+                <p>Digital marketing efforts, instead of handling in-house. They can provide your business with a
+                    variety of
+                    digital
+                    solutions to promote your product or service online and help you hit your marketing goals and grow
+                    your
+                    business.</p>
+            </div>
 
-    <div class="copyright">
-        <p>Copyright © 2022 Laaqiq. All Rights Reserved.</p>
-        <div>
-            <span>Terms of Use</span>
-            <span>Privacy Policy</span>
+            <div class="faq">
+                <div class="title">
+                    <h4>Hire to outsource your digital</h4>
+                    <button class="btn-primary-icon"><img src="../src/images/down.svg" alt=""></button>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="title">
+                    <h4>Marketing efforts</h4>
+                    <button class="btn-primary-icon"><img src="../src/images/down.svg" alt=""></button>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="title">
+                    <h4>Can provide your business</h4>
+                    <button class="btn-primary-icon"><img src="../src/images/down.svg" alt=""></button>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-</footer>
+    <!-- ! Footer Section -->
+    <footer>
+        <div class="footer">
+            <h4>Agency</h4>
+
+            <ul>
+                <h5>Menu</h5>
+                <li><span>About</span></li>
+                <li><span>Services</span></li>
+                <li><span>Blog</span></li>
+                <li><span>Contact</span></li>
+            </ul>
+
+            <ul>
+                <h5>Service</h5>
+                <li><span>Design</span></li>
+                <li><span>Development</span></li>
+                <li><span>Marketing</span></li>
+                <li><span>See More</span></li>
+            </ul>
+
+            <div>
+                <button class="btn-primary-icon"><img src="../src/images/fb.svg" alt=""></button>
+                <button class="btn-primary-icon"><img src="../src/images/twitter.svg" alt=""></button>
+                <button class="btn-primary-icon"><img src="../src/images/instagram.svg" alt=""></button>
+            </div>
+        </div>
+
+        <div class="border"></div>
+
+        <div class="copyright">
+            <p>Copyright © 2022 Laaqiq. All Rights Reserved.</p>
+            <div>
+                <span>Terms of Use</span>
+                <span>Privacy Policy</span>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../src/app.js"></script>
 
 </body>
 
