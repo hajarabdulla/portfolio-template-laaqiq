@@ -349,7 +349,7 @@
 
   h4 {
     @include typo(400, 1rem, initial, $text-dark-accent);
-    text-transform: uppercase
+    text-transform: uppercase;
   }
 
   h2 {
@@ -677,6 +677,7 @@
 // ! Agency Help
 .agency-help {
   margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .agency-help__header {
