@@ -5,21 +5,23 @@ const description = document.querySelector(".desc");
 const toggleBtn = document.querySelector(".toggle");
 
 hamburgerMenu.addEventListener("click", () => {
-  bar.forEach((bar) => bar.classList.toggle("change"));
-  menu.classList.toggle("change");
-  if (menu.classList.contains("change")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
+    bar.forEach((bar) => bar.classList.toggle("change"));
+    menu.classList.toggle("change");
+    if (menu.classList.contains("change")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
 });
 
 toggleBtn.addEventListener("click", (e) => {
-  if (e.target.src !== "http://127.0.0.1:5500/src/images/up.svg") {
-    description.classList.add("active");
-    e.target.src = "../src/images/up.svg";
-  } else {
-    description.classList.remove("active");
-    e.target.src = "../src/images/down.svg";
-  }
+    if (e.target.src !== "http://127.0.0.1:5500/src/images/up.svg") {
+        description.classList.add("active");
+        e.target.src = "../src/images/up.svg";
+    } else {
+        description.classList.remove("active");
+        e.target.src = "../src/images/down.svg";
+    }
 });
+
+console.log("Hello world")
